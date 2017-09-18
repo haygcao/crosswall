@@ -5,12 +5,12 @@ echo " 开始更新dnsmasq规则"
 # 下载sy618扶墙规则
 wget --no-check-certificate -q -O /tmp/sy618 https://raw.githubusercontent.com/sy618/hosts/master/dnsmasq/dnsfq
 
-# 下载racaljk规则
-wget --no-check-certificate -q -O /tmp/googlehosts https://raw.githubusercontent.com/racaljk/hosts/master/dnsmasq.conf
+# 下载googlehosts规则
+wget --no-check-certificate -q -O /tmp/googlehosts https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/dnsmasq.conf
 
-# 删除racaljk规则中的冲突规则
-#sed -i '/google/d' /tmp/racaljk
-#sed -i '/youtube/d' /tmp/racaljk
+# 删除googlehosts规则中的冲突规则
+#sed -i '/google/d' /tmp/googlehosts
+#sed -i '/youtube/d' /tmp/googlehosts
 
 # 创建用户自定规则缓存
 cp /etc/dnsmasq.d/userlist /tmp/userlist
